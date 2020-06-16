@@ -1,0 +1,67 @@
+.main-screen {
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 28%;
+    margin-top: 5%;
+}
+
+.main-friends-screen-head {
+    display: inline-block;
+    width: 350px;
+    height: 500px;
+    border-right: 1px solid black;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.main-bot-screen-head {
+    display: inline-block;
+    width: 349px;
+    height: 500px;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.main-friends-screen {
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 28%;
+    margin-top: 5%;
+}
+
+.main-bot-screen {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 28%;
+    margin-top: 5%;
+}
+
+.create-room-heading {
+    display: inline-block;
+    height: 35px;
+    width: 180px;
+}
+
+.create-room-heading__text {
+    text-align: center;
+    padding-top: 14px;
+}
+
+.join-room-heading {
+    display: inline-block;
+    height: 35px;
+    width: 180px;
+}
+
+.join-room-heading__text {
+    text-align: center;
+    padding-top: 14px;
+}
+
+.friends-room-selector {
+    height: 40px;
+    border-bottom: 2px solid black;
+}
