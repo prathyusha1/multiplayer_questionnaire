@@ -38,16 +38,16 @@ class GameBoard extends Component {
     render() {
         return (
             <Fragment>
-                <h1 className="Title-header"> This is Game Board </h1> 
+                <h1 className="Title-header"> 20 Questions Game Board </h1> 
                 {!this.state.mainScreen && <div> 
                     <span className="home-btn" onClick={() => this.goToHome()}> Home </span>
                     </div>}
                 { this.state.mainScreen && <div className="main-screen">
-                    <div onClick= {() => this.onPlayWithFriends()} className="main-friends-screen-head">
+                    {/* <div onClick= {() => this.onPlayWithFriends()} className="main-friends-screen-head">
                         <span>
                             Play With Friends
                         </span>
-                    </div>
+                    </div> */}
                     <div onClick={() => this.onPlayWithComputer()} className="main-bot-screen-head">
                         <span>
                             Play Vs Computer
@@ -67,8 +67,8 @@ class GameBoard extends Component {
                 }
                 {
                     this.state.botScreen && <div className="main-bot-screen">
-                        <span>
-                        This is Botscreen sdddcreen
+                        <span className="side-heading">
+                        Play Vs Computer
                         </span>
                         <BotPlay />
                     </div>

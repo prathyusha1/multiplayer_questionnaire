@@ -16,7 +16,6 @@ def get_req_body_json(request):
 
 def get_animals_data(request):
     resp = service.get_questions()
-    print("**resp", resp)
     formatted_resp = resp
     resp_msg = {
         "questions": formatted_resp,
@@ -28,4 +27,10 @@ def get_animals_data(request):
 def validate_animals_response(request):
     req_body = get_req_body_json(request)
     responses = req_body.get('responses')
-    return service.identify_animal(responses)
+    print("responses => ", responses)
+    identifier = service.identify_animal(responses)
+    resp_msg = {
+        "identifier": identifier,
+        "status": status.HTTP_200_OK
+    }
+    return JsonResponse(resp_msg)

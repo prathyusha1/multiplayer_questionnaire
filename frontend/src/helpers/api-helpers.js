@@ -1,11 +1,29 @@
 import axios from 'axios';
 
-export async function getApi(url) {
-    try {
-        const response = await axios.get(url);
-        console.log(response);
-        return response;
-    } catch (error) {
-        console.error(error);
-    }
+export function getApi(url) {
+    return new Promise((resolve, reject) => {
+        try {
+            axios.get(url).then(response => {
+                resolve(response && response.data);
+    
+            });
+        } catch (error) {
+            console.error(error);
+            reject(error);
+        }    
+    });
+}
+
+export function postApi(url, data) {
+    return new Promise((resolve, reject) => {
+        try {
+            axios.post(url, data).then(response => {
+                resolve(response && response.data);
+    
+            });
+        } catch (error) {
+            console.error(error);
+            reject(error);
+        }    
+    });
 }

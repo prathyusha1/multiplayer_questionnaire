@@ -58,7 +58,7 @@ class AnimalsCatogories(enum.Enum):
 
 
 animals_metadata = {
-    AnimalsCatogories.Mammals: [
+    AnimalsCatogories.Mammals.value: [
         Animals.giraffe,
         Animals.tiger,
         Animals.elephant,
@@ -75,12 +75,12 @@ animals_metadata = {
         Animals.rhino,
         Animals.fox
     ],
-    AnimalsCatogories.FLYING_ANIMALS: [
+    AnimalsCatogories.FLYING_ANIMALS.value: [
         Animals.daddylonglegs,
         Animals.bee,
         Animals.eagle
     ],
-    AnimalsCatogories.WATER_ANIMALS: [
+    AnimalsCatogories.WATER_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -92,13 +92,13 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.BEAK: [
+    AnimalsCatogories.BEAK.value: [
         Animals.penguin,
         Animals.eagle,
         Animals.parrot,
         Animals.owl
     ],
-    AnimalsCatogories.NOCTURNAL_ANIMALS: [
+    AnimalsCatogories.NOCTURNAL_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -110,7 +110,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.SHELL_ANIMALS: [
+    AnimalsCatogories.SHELL_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -122,7 +122,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.SLITHERING_ANIMALS: [
+    AnimalsCatogories.SLITHERING_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -134,7 +134,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.WHISKERS: [
+    AnimalsCatogories.WHISKERS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -146,7 +146,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.PAWS: [
+    AnimalsCatogories.PAWS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -158,7 +158,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino,
     ],
-    AnimalsCatogories.STRIPES: [
+    AnimalsCatogories.STRIPES.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -170,7 +170,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.FUR: [
+    AnimalsCatogories.FUR.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -182,7 +182,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.FOURLEGGED_ANIMALS: [
+    AnimalsCatogories.FOURLEGGED_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -194,7 +194,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.STINGING_ANIMALS: [
+    AnimalsCatogories.STINGING_ANIMALS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -206,7 +206,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.TAIL: [
+    AnimalsCatogories.TAIL.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -218,7 +218,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.SCALES: [
+    AnimalsCatogories.SCALES.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -230,7 +230,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.CARNIVORES: [
+    AnimalsCatogories.CARNIVORES.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -242,7 +242,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.SPOTS: [
+    AnimalsCatogories.SPOTS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -254,7 +254,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.GILLS: [
+    AnimalsCatogories.GILLS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -266,7 +266,7 @@ animals_metadata = {
         Animals.salmon,
         Animals.rhino
     ],
-    AnimalsCatogories.HORNS: [
+    AnimalsCatogories.HORNS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,
@@ -278,7 +278,7 @@ animals_metadata = {
         Animals.rhino,
         Animals.fox
     ],
-    AnimalsCatogories.FEATHERS: [
+    AnimalsCatogories.FEATHERS.value: [
         Animals.penguin,
         Animals.octopus,
         Animals.jellyfish,

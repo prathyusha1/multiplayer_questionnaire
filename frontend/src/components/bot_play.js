@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import getApi from '../helpers/api-helpers';
+import { getApi, postApi } from '../helpers/api-helpers';
 
 class BotPlay extends Component {
     constructor(props) {
@@ -15,68 +15,67 @@ class BotPlay extends Component {
         ]
     }
     componentDidMount() {
-        getApi().then(response => {
+        getApi("api/animals/data").then(response => {
             const questions = response && response.questions;
             this.setState(() => {
                 return {
                     questions,
-                    loaded: true
+                    loaded: true,
                 };
             });
-        })
-        fetch("api/animals/data")
-            .then(response => {
-                if (response.status > 400) {
-                    return this.setState(() => {
-                        return { placeholder: "Something went wrong!" };
-                    });
-                }
-                console.log('**resp', response);
-                return response.json();
-            })
-            .then(response => {
-                console.log('**questions', response)
-                const questions = response && response.questions;
-                this.setState(() => {
-                    return {
-                        questions,
-                        loaded: true
-                    };
-                });
-            });
+        });
     }
 
     getCurrentQuestion() {
         return this.state.questions.find(data => data.idx == this.state.currentQuestion);
     }
 
-    async onAnswerSubmit(idx, ans) {
+    onAnswerSubmit(idx, ans) {
         this.responses = [
-        ...this.responses,
+        ...(this.responses.filter(function(val) {return (val.idx != idx)})),
         {
             idx: idx,
             ans: ans === 'yes' ? 1 : 0
         }]
-        this.setState({
-            ...this.state,
-            currentQuestion: currentQuestion + 1
+        postApi('api/animals/validate', {
+            "responses": this.responses
+        }).then(output => {
+            console.log('**output', output);
+            if (output && output.identifier) {
+                this.setState({
+                    ...this.state,
+                    questions: [],
+                    placeholder: output.identifier
+                })
+            } else {
+                if (this.state.currentQuestion < this.state.questions.length) {
+                    this.setState({
+                        ...this.state,
+                        currentQuestion: this.state.currentQuestion + 1
+                    })        
+                } else {
+                    this.setState({
+                        ...this.state,
+                        questions: [],
+                        placeholder: 'Sorry, we are unable to identify your guess'
+                    })
+                }
+            }
         })
-
     }
 
     render() {
         console.log('**in render', this.state.questions.length)
         return (
-            <Fragment>
-                <div> afjkdjfdljkf </div>
+            <div className="question">
                 {
                 this.state.questions.length > 0 ?
                         (
                             <div>
                                 <div> {this.getCurrentQuestion().text} </div>
-                                <div>
-                                    <button> Yes </button>
-                                    <button> No </button>
+                                <div className="buttons">
+                                    <button className="yes-btn" onClick={() => this.onAnswerSubmit(this.state.currentQuestion, "yes")}> Yes </button>
+                                    <button className="no-btn" onClick={() => this.onAnswerSubmit(this.state.currentQuestion, "no")}> No </button>
                                 </div>
 
                             </div>
@@ -85,7 +84,7 @@ class BotPlay extends Component {
                     <div> {this.state && this.state.placeholder} </div>
                 }
 
-            </Fragment>
+            </div>
         )
     }
 }
