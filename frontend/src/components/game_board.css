@@ -1,34 +1,58 @@
 .main-screen {
     width: 700px;
-    height: 500px;
+    height: 200px;
     border: 2px solid black;
-    margin-left: 28%;
+    margin-left: 22%;
     margin-top: 5%;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 .main-friends-screen-head {
     display: inline-block;
     width: 350px;
-    height: 500px;
-    border-right: 1px solid black;
+    height: 200px;
+    /* border-right: 1px solid black; */
     text-align: center;
-    padding-top: 14px;
+    padding-top: 82px;
+    color: #040404;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.main-friends-screen-head:hover{
+    color: aliceblue;
 }
 
 .main-bot-screen-head {
     display: inline-block;
-    width: 349px;
-    height: 500px;
+    width: 350px;
+    height: 200px;
     text-align: center;
     padding-top: 14px;
+    color: #040404;
+    font-size: 24px;
+    cursor: pointer;
+}
+.main-bot-screen-head:hover{
+    color: aliceblue;
+}
+
+.home-btn{
+    position: absolute;
+    right: 32%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #2cb5e8;
 }
 
 .main-friends-screen {
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 200px;
     border: 2px solid black;
-    margin-left: 28%;
+    margin-left: 30%;
     margin-top: 5%;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 .main-bot-screen {
@@ -42,9 +66,17 @@
 .create-room-heading {
     display: inline-block;
     height: 35px;
-    width: 180px;
+    width: 250px;
+    position: relative;
+    top: 25px;
+    /* padding: 11px; */
+    text-align: center;
+    cursor: pointer;
 }
 
+.create-room-heading:hover{
+    color: #fff;
+}
 .create-room-heading__text {
     text-align: center;
     padding-top: 14px;
@@ -53,7 +85,15 @@
 .join-room-heading {
     display: inline-block;
     height: 35px;
-    width: 180px;
+    width: 250px;
+    position: relative;
+    top: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.join-room-heading:hover{
+    color:#fff;
 }
 
 .join-room-heading__text {
@@ -62,6 +102,35 @@
 }
 
 .friends-room-selector {
-    height: 40px;
+    height: 55px;
     border-bottom: 2px solid black;
+}
+.Title-header{
+    text-align: center;
+    color: #2cb5e8;
+}
+.join-room-content{
+    text-align: center;
+    top: 35px;
+    position: relative;
+}
+.join-room-content span {
+    position: relative;
+    bottom: 20px;
+}
+.join-room-content label {
+    position: relative;
+    bottom: 10px;
+}
+.join-room-content button{
+    background-color: #2cb6e9;
+    font-size: 17px;
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 7px 6px #13d4cb;
+}
+.join-room-content input{
+    border: 1px solid bisque;
+    border-radius: 10px;
+    background-color: ghostwhite;
 }

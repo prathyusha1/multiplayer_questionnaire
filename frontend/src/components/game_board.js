@@ -38,9 +38,9 @@ class GameBoard extends Component {
     render() {
         return (
             <Fragment>
-                This is Game Board
+                <h1 className="Title-header"> This is Game Board </h1> 
                 {!this.state.mainScreen && <div> 
-                    <span onClick={() => this.goToHome()}> Home </span>
+                    <span className="home-btn" onClick={() => this.goToHome()}> Home </span>
                     </div>}
                 { this.state.mainScreen && <div className="main-screen">
                     <div onClick= {() => this.onPlayWithFriends()} className="main-friends-screen-head">
@@ -68,7 +68,7 @@ class GameBoard extends Component {
                 {
                     this.state.botScreen && <div className="main-bot-screen">
                         <span>
-                        This is Botscreen screen
+                        This is Botscreen sdddcreen
                         </span>
                         <BotPlay />
                     </div>

@@ -36,7 +36,6 @@ class FriendsPlay extends Component {
                             <span className="create-room-heading__text"> Create Room </span>
                             <div className="right-slash"></div>
                         </div>
-
                         <div className="join-room-heading" onClick={()=>this.onJoinRoomClick()}>
                             <span className="join-room-heading__text"> Join Room </span>
                             <div className="left-slash"></div>
@@ -57,7 +56,7 @@ class FriendsPlay extends Component {
                                     <label>
                                         Enter Room Code:
                                         <input type="text" name="name" />
-                                    </label>
+                                    </label><br/>
                                     <button> Join Room </button>
                                 </div>
                             </div>}
