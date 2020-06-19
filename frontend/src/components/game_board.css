@@ -58,8 +58,8 @@
 
 .main-bot-screen {
     display: inline-block;
-    width: 350px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     color: #040404;
     font-size: 24px;
     cursor: pointer;
@@ -175,4 +175,15 @@
     height: 30px;
     border-radius: 12px;
     background: wheat;
+}
+
+.score-card {
+    display: inline-block;
+
+}
+
+.score-text {
+    font-size: 18px;
+    color: white;
+    padding-left: 114px;
 }

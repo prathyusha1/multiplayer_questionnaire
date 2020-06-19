@@ -27,7 +27,6 @@ def get_animals_data(request):
 def validate_animals_response(request):
     req_body = get_req_body_json(request)
     responses = req_body.get('responses')
-    print("responses => ", responses)
     identifier = service.identify_animal(responses)
     resp_msg = {
         "identifier": identifier,

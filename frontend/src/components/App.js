@@ -4,7 +4,6 @@ import GameBoard from './game_board';
 
 class App extends Component {
     constructor(props) {
-        console.log('**constructor');
         super(props);
         this.state = {
         };

@@ -1,9 +1,11 @@
 version: '3'
 services:
-  web:
-    build: .
-    command: cd frontend && npm run build && cd .. && python manage.py runserver 0.0.0.0:8000
+  django:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - .:/app
     ports:
       - "8000:8000"
